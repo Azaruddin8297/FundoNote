@@ -57,7 +57,6 @@ public class NoteService : INotes
     public NotesEntity EditNote(string emailId, string noteId, NoteModel updatedNote)
     {
         NotesEntity noteForUser = _db.Notes.FirstOrDefault(x => x.EmailId == emailId && x.NoteId == noteId);
-
         if (noteForUser != null)
         {
             noteForUser.Title = updatedNote.Title;
