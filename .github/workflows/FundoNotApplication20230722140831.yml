@@ -1,10 +1,10 @@
-name: Build and deploy .NET Core application to Web App FundoNotApplication20230722213601
+name: Build and deploy .NET Core application to Web App FundoNotApplication20230722140831
 on:
   push:
     branches:
     - main
 env:
-  AZURE_WEBAPP_NAME: FundoNotApplication20230722213601
+  AZURE_WEBAPP_NAME: FundoNotApplication20230722140831
   AZURE_WEBAPP_PACKAGE_PATH: .\publish
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 6.0.x
@@ -44,5 +44,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
-        publish-profile: ${{ secrets.FundoNotApplication20230722213601_76E1 }}
+        publish-profile: ${{ secrets.FundoNotApplication20230722140831_50AA }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
